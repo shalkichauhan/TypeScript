@@ -5,7 +5,6 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 */
-
 // price =[4,7,5,3,8]
 // max sum
 //run two loops
@@ -15,20 +14,15 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 // then max = arr[i]-arr[j]
 // else do nothing
 //}return max
-
-function profit(arr:Array<number>):number{
-
-    let max:number=0;
-
-    for(let i=0;i<arr.length-1;i++){
-        for(let j=i+1;j<arr.length;j++){
-            if((arr[i]-arr[j])>max){
-                max=arr[i]-arr[j]
+function profit(arr) {
+    var max = 0;
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if ((arr[i] - arr[j]) > max) {
+                max = arr[i] - arr[j];
             }
         }
     }
-
-    return max
-
+    return max;
 }
-console.log(profit([4,7,5,3,8]))
+console.log(profit([4, 7, 5, 3, 8]));
